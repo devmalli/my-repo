@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#githunb repo url
+
+API_URL=https://api.github.com
+
+#github credentials
+USERNAME=$username
+TOKEN=$token
+
+#user and repository information
+REPO_OWNNER=$1
+REPO_NAME=$2
+
+#function to make an api get request
+function github_api_get {
+        local endpoint= "repos/${REPO_OWNNER}/${REPO_NAME}/collaborators"
+        local url="${API_UR})/${endpoint}"
+        curl -s -u "${USERNAME}:${TOKEN}" "url"
+
+}
+
